@@ -35,6 +35,8 @@ public class SaleApi {
 
         // 进行支付
         double pay = payService.doPay();
+        System.out.println("销售成功，书ID: " + book.getId() + "  书名:  " + book.getName() + ", 作者："
+                + book.getAuthor() + "  单价(为了简单,价格都一样):" + book.getPrice() + "元" + "  销售总金额:" + pay + "元");
 
         return "销售成功，书ID: " + book.getId() + "  书名:  " + book.getName() + ", 作者："
                 + book.getAuthor() + "  单价(为了简单,价格都一样):" + book.getPrice() + "元" + "  销售总金额:" + pay + "元";
